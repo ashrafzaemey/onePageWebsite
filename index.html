@@ -20,10 +20,10 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <div class="navbar navbar-custom navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="navbar navbar-inverse navbar-custom navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
             <span class="sr-only">Navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -31,11 +31,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>            
           </button>
-          <a class="navbar-brand scroll-section" href="#">Home</a>
-          <a class="navbar-brand scroll-section" href="#">Downloads</a>
-          <a class="navbar-brand scroll-section" href="#">Articles</a>
-          <a class="navbar-brand scroll-section" href="#">Purchasing</a>
-          <a class="navbar-brand scroll-section" href="#">Contact</a>
+          <div class="collapse navbar-collapse navbar-right navbar-main-collapse">        
+            <a class="navbar-brand scroll-section" href="#">Home</a>
+            <a class="navbar-brand scroll-section" href="#feature">Features</a>            
+            <a class="navbar-brand scroll-section" href="#">Articles</a>
+            <a class="navbar-brand scroll-section" href="#buy">Buy</a>
+            <a class="navbar-brand scroll-section" href="#contact">Contact</a>
+          </div>
         </div>
         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
@@ -52,43 +54,132 @@
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="home">
+    <div class="home text-center">
       <div class="jumbotron">
         <div class="container brand-heading">
-          <h3>Astronomy Software Suite</h3>
           <h1>Stellaris</h1>      
-          <p>Stellaris is an astronomy software suite that runs on Windows. It is intended to be useful to hobby astronomers.</p>
-          <p><a class="btn btn-primary btn-lg btn-circle" role="button">Download &raquo;</a></p>
+          <p>Stellaris is a very comprehensive astronomy suite that goes well beyond displaying the nightly sky. Showing the positions of stars, planets, and Deep Sky objects for an arbitrary time and location is only the beginning, but with Stellaris the sky is limitless.</p>
+          <p><a class="btn btn-primary btn-lg btn-circle" role="button">Download for Windows &raquo;</a></p>
+          <p class="small-font">Version 1.70</p>
+        </div>
+
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script>
+      function loadImages(sources, callback) {
+        var images = {};
+        var loadedImages = 0;
+        var numImages = 0;
+        // get num of sources
+        for(var src in sources) {
+          numImages++;
+        }
+        for(var src in sources) {
+          images[src] = new Image();
+          images[src].onload = function() {
+            if(++loadedImages >= numImages) {
+              callback(images);
+            }
+          };
+          images[src].src = sources[src];
+        }
+      }
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+
+      var sources = {
+        darthVader: 'http://www.stellaris-software.com/cms/images/stories/screenshots/010_sol.jpg',
+      };
+
+      loadImages(sources, function(images) {
+        context.drawImage(images.darthVader, 1, 21, 800, 637);
+      });
+
+    </script>
+
+        <div class="awards">
+          <h3>Winner Reviewers' Choice</h3>
+          <p><img src="/img/"></p>
         </div>
       </div>
     </div>
 
-    <div class="container">
-      <!-- Example row of columns -->
- <!--      <div class="row">
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    <section id="feature" class="content-section">
+      <h1 class="text-center">Things About Stellaris</h1>
+      <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Project Aim</h3>
+            <p>The aim of Stellaris is to provide astronomy-related information in a manner that helps hobbyist learn and understand the night sky.</p>
+            <h3>Background</h3>
+            <p>Stellaris started as a hobby project. It still is a hobby project, although a rather elaborate one. We put our spare time into developing the software and aim to release a major update about once a year.</p>
+            <h3>Supported OS</h3>
+            <p>Stellaris requires Microsoft Windows to run. The most recent versions of Windows are supported. The current version of Stellaris runs on Windows XP, Windows Vista, and Windows 7. </p>   
+            <h3>StellarScript</h3>
+            <p>Stellaris is able to run scripts written in a language called StellarScript. Running a script is like automating Stellaris. A script can automatically display the night sky, choose a celestial body to examine, and give explanatory comments.</p>
+<!--             <p>The features that make it into a new release are a blend of user feedback and my own ideas. If you feel Stellaris is missing an important feature, or if you have found an error in the software (or even if you think you may have found one), contact me. Feel free to write and tell me how Stellaris can become even better.</p> -->
+            <!-- <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p> -->
+          </div>
+          <div class="col-md-6"> 
+            <h3>Some of the Features</h3>
+            <ul class="featuredList">
+              <li class="numberList">1</i>
+              <li class="descList">The Educator tool interactively demonstrates and explains astronomical concepts and current phenomena.</li> 
+              <li class="numberList">2</i>
+              <li class="descList">The Event Forecast automatically forecasts relevant astronomical events such as conjunctions and eclipses.</li>
+              <li class="numberList">3</i>
+              <li class="descList">Experienced users can go a step further and let Stellaris find occurrences of user-defined phenomena, like "sunrise before 7 AM".</li>
+              <li class="numberList">4</i>
+              <li class="descList">Stellaris generates reports of past and future astronomical phenomena. A report contains data for one day/night, one month, or one year.</li>
+              <li class="numberList">5</i>
+              <li class="descList">The application can calculate a wealth of data for all celestial bodies. This data can be calculated for an arbitrary time span, displayed as a graph, and exported as XML.</li>
+              <li class="numberList">6</i>
+              <li class="descList">The Tasks window  suggests which actions you may want to take next. For example, Moon in the sky window, the Related Tasks offers to display an image, search for a lunar eclipse / generate a report of the Moon's ephemerides.</li>
+              <li class="numberList">7</i>
+              <li class="descList">Stellaris also features an interactive Quick Tour and an extensive help file which explain all the application's features in detail.</li>
+            </ul>
+          </div>
         </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-       </div>
-        <div class="col-md-4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div>
-      </div> -->
+      </div>
+    </section>
 
-      <hr>
+    <section id="Buy" class="download-section">
+      <div class="container">
+        <p><a class="btn btn-default btn-lg btn-circle" role="button">Download &copy;Stellaris (1.70) &raquo;</a></p>
+      <br/>
+      <h4>Collection of astronomical images with Stellaris</h4>
+        <p><a class="btn btn-default" role="button">PicPack Deep Sky 1 &raquo;</a></p>
+        <p><a class="btn btn-default" role="button">PicPack Deep Sky 2 &raquo;</a></p>
+        <p><a class="btn btn-default" role="button">PicPack Planetary Satellites &raquo;</a></p>
 
-      <footer>
-        <p>&copy; Stellaris 2014</p>
-      </footer>
-    </div> <!-- /container -->        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <!-- Example row of columns -->
+   <!--      <div class="row">
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+         </div>
+          <div class="col-md-4">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+          </div>
+        </div> -->
+
+        <hr>
+
+        <footer>
+            <p>&copy; Stellaris 2014</p>
+        </footer>
+      </div> <!-- /container -->        
+    </section>
+      
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
