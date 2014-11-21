@@ -32,38 +32,39 @@
             <span class="icon-bar"></span>            
           </button>
           <div class="collapse navbar-collapse navbar-right navbar-main-collapse">        
-            <a class="navbar-brand scroll-section" href="#">Home</a>
+            <a class="navbar-brand scroll-section" href="#home">Home</a>
             <a class="navbar-brand scroll-section" href="#feature">Features</a>            
             <a class="navbar-brand scroll-section" href="#">Articles</a>
             <a class="navbar-brand scroll-section" href="#buy">Buy</a>
             <a class="navbar-brand scroll-section" href="#contact">Contact</a>
           </div>
         </div>
-        <div class="navbar-collapse collapse">
+<!--         <div class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form">
-<!--             <div class="form-group">
+            <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
             </div>
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
             <button type="submit" class="btn btn-success">Sign in</button>
-          </form> -->
+          </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="home text-center">
+    <header id="home" class="home text-center">
       <div class="jumbotron">
         <div class="container brand-heading">
           <h1>Stellaris</h1>      
-          <p>Stellaris is a very comprehensive astronomy suite that goes well beyond displaying the nightly sky. Showing the positions of stars, planets, and Deep Sky objects for an arbitrary time and location is only the beginning, but with Stellaris the sky is limitless.</p>
+          <p>Stellaris is a comprehensive astronomy suite that goes well beyond displaying the positions of stars, planets, and Deep Sky Objects</p>
           <p><a class="btn btn-primary btn-lg btn-circle" role="button">Download for Windows &raquo;</a></p>
           <p class="small-font">Version 1.70</p>
         </div>
 
-    <canvas id="myCanvas" width="800" height="800"></canvas>
+
+<!--     <canvas id="myCanvas" width="800" height="800"></canvas>
     <script>
       function loadImages(sources, callback) {
         var images = {};
@@ -99,9 +100,53 @@
         <div class="awards">
           <h3>Winner Reviewers' Choice</h3>
           <p><img src="/img/"></p>
-        </div>
+        </div> -->
       </div>
-    </div>
+        <div id="myCarousel" class="carousel slide text-center">
+          
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+              <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+          </ol>
+
+          <!-- Wrapper for Slides -->
+          <div class="carousel-inner">
+              <div class="item active left">
+                  <div class="fill" style="background-image:url('img/screenshot/screenshotbg1.jpg');"></div>
+                  <div class="carousel-caption">
+                      <h2>Sky</h2>
+                      <p>The Sky Window displays the appearance of the sky at a given time and location.</p>
+                  </div>
+              </div>
+              <div class="item next left">
+                  <div class="fill" style="background-image:url('img/screenshot/screenshotbg2.jpg');"></div>
+                  <div class="carousel-caption">
+                      <h2>Solar System</h2>
+                      <p>The Sky Window displays the appearance of the sky at a given time and location.</p>
+                  </div>
+              </div>
+              <div class="item">
+                  <div class="fill" style="background-image:url('img/screenshot/screenshotbg3.jpg');"></div>
+                  <div class="carousel-caption">
+                      <h2>Pictures</h2>
+                      <p>The Sky Window displays the appearance of the sky at a given time and location.</p>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>      
+    </header>
 
     <section id="feature" class="content-section">
       <h1 class="text-center">Things About Stellaris</h1>
@@ -143,33 +188,27 @@
       </div>
     </section>
 
-    <section id="Buy" class="download-section">
+    <section id="buy" class="download-section">
       <div class="container">
-        <p><a class="btn btn-default btn-lg btn-circle" role="button">Download &copy;Stellaris (1.70) &raquo;</a></p>
-      <br/>
-      <h4>Collection of astronomical images with Stellaris</h4>
-        <p><a class="btn btn-default" role="button">PicPack Deep Sky 1 &raquo;</a></p>
-        <p><a class="btn btn-default" role="button">PicPack Deep Sky 2 &raquo;</a></p>
-        <p><a class="btn btn-default" role="button">PicPack Planetary Satellites &raquo;</a></p>
-
-        <!-- Example row of columns -->
-   <!--      <div class="row">
+        <div class="row">
+          <h1 class="text-center">Buy Stellaris</h2>
+          <div class="col-md-8 border-right"> 
+            <p>Stellaris may be downloaded and evaluated for the 30 Days <a hrer="#home">free</a>, however a license must be purchased for continued use.</p>
+            <p>Stellaris Licenses are per-user, NOT per-machine, this so you can enjoy Stellaris on as many computers and operating systems as you want with your license.</p>
+            <form id="buy-form" action="" role="form" >
+              <fieldset><div class="label-field">Full Name</div><div class="input-field"><input type="text" class="form-control" placeholder=""></div></fieldset>
+              <fieldset><div class="label-field">Email</div><div class="input-field"><input type="email" class="form-control" placeholder=""></div></fieldset>
+              <fieldset><div><a class="btn btn-default btn-lg btn-circle" role="button">Buy &copy;Stellaris (1.70) &raquo;</a></div></fieldset>
+            </form>
+            <br/>
+          </div>    
           <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <h4>Collection of astronomical images with Stellaris</h4>
+            <p><a class="btn btn-default" role="button">PicPack Deep Sky 1 &raquo;</a></p>
+            <p><a class="btn btn-default" role="button">PicPack Deep Sky 2 &raquo;</a></p>
+            <p><a class="btn btn-default" role="button">PicPack Planetary Satellites &raquo;</a></p>
           </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-         </div>
-          <div class="col-md-4">
-            <h2>Heading</h2>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-          </div>
-        </div> -->
+        </div>
 
         <hr>
 
