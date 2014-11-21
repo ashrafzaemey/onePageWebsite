@@ -221,7 +221,7 @@ a:hover,a:focus {
     background: #3f3f3f;
     border: none;
 }
-.content-section {
+.content-section, .contact-section {
     background: #cecece;
     color: #111111;
     padding-top: 100px;
@@ -244,14 +244,13 @@ a:hover,a:focus {
 }
 
 @media(min-width:767px) {
-    .content-section {
+    .content-section .contact-section{
         padding-top: 101px;
     }
 
     .download-section {
         padding: 100px 0;
     }
-
 }
 .btn {
     text-transform: uppercase;
@@ -341,12 +340,55 @@ footer p {
     color: red;
 }
 
-.border-right {
-    border-right: 1px solid #aaaaaa;
+/*****************************
+Buy Section:
+*****************************/ 
+form#buy-form {
+    width: 60%;
+    margin: 0 auto;
 }
 
 fieldset {
 	border: 0;
 	margin: 9px 0;
 	padding: 7px 0;
+}
+
+.label-field, .input-field {
+    /* width: 30%; */
+    float: left;
+    display: block;
+    margin: 5px;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.label-field {
+    width: 30%;
+}
+
+.input-field {
+    width: 63%;
+}
+
+#buy-form a {
+    width: 100%;
+}
+
+.price-text {
+    text-align: right;
+}
+
+.price-text {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.buy-box {
+    /* border: 1px #cecece; */
+    border-radius: 7px;
+    padding: 33px;
+    background-color: #434343;
+    margin: 11px 0;
+    min-height: 641px;
 }
