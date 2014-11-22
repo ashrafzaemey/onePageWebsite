@@ -113,6 +113,13 @@
 
           <!-- Wrapper for Slides -->
           <div class="carousel-inner">
+              <div class="item">
+                  <div class="fill" style="background-image:url('img/screenshot/screenshotbg3.jpg');"></div>
+                  <div class="carousel-caption">
+                      <h2>Pictures</h2>
+                      <p>The Sky Window displays the appearance of the sky at a given time and location.</p>
+                  </div>
+              </div>
               <div class="item active left">
                   <div class="fill" style="background-image:url('img/screenshot/screenshotbg1.jpg');"></div>
                   <div class="carousel-caption">
@@ -127,14 +134,7 @@
                       <p>The Sky Window displays the appearance of the sky at a given time and location.</p>
                   </div>
               </div>
-              <div class="item">
-                  <div class="fill" style="background-image:url('img/screenshot/screenshotbg3.jpg');"></div>
-                  <div class="carousel-caption">
-                      <h2>Pictures</h2>
-                      <p>The Sky Window displays the appearance of the sky at a given time and location.</p>
-                  </div>
-              </div>
-          </div>
+            </div>
 
           <!-- Controls -->
           <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
@@ -195,24 +195,24 @@
           <p class="text-center">Stellaris may be downloaded and evaluated for the 30 Days for <a hrer="#home">FREE</a>, however a license must be purchased for continued use.</p>
           <div class="col-md-8">
             <div class="buy-box">
-              <p>When you register the software, which involves paying a licence fee, you receive a license file that contains your personal key code. You may then copy the license file to the installation folder, and its presence turns the installed software from an unregistered copy into a copy that is personally registered to you.</p>
+              <p>When you register the software, you receive a license file that contains your personal key code. You may then copy the license file to the installation folder, and its presence turns the installed software from an unregistered copy into a copy that is personally registered to you.</p>
               <p>Stellaris Licenses are per-user, NOT per-machine, this so you can enjoy Stellaris on as many computers and operating systems as you want with your license.</p>
               
-              <form id="buy-form" action="" method="post" role="form" >
+              <form id="buy-form" action="" method="post" data-text-swap="show" role="form" >
                 <fieldset>
                   <div class="label-field">Full Name</div>
-                  <div class="input-field"><input type="text" class="form-control" placeholder=""></div>
+                  <div class="input-field"><input id="fullName" type="text" class="form-control" placeholder=""></div>
                 </fieldset>
                 <fieldset>
                   <div class="label-field">Email</div>
-                  <div class="input-field"><input type="email" class="form-control" placeholder=""></div>
+                  <div class="input-field"><input id="email" type="email" class="form-control" placeholder=""></div>
                 </fieldset>
                 <fieldset>
                   <div class="price-text">USD 20.00</div>
                 </fieldset>
                 <fieldset>
                   <div class="buy-field text-center">
-                    <input type="image" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+                    <input type="image" id="submitButton" src="https://www.sandbox.paypal.com/en_US/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
                   </div>
                 </fieldset>
               </form>
@@ -224,9 +224,9 @@
               <h3 class="text-center">PicPack</h3>
               <h4 class="text-center">- Free Images -</h4>
               <p>PicPack for Stellaris is a free collection of astronomical images that Stellaris can display. The images have been collected from the internet for your convenience.</p>
-              <p><a class="btn btn-default" role="button">PicPack Deep Sky 1 &raquo;</a></p>
-              <p><a class="btn btn-default" role="button">PicPack Deep Sky 2 &raquo;</a></p>
-              <p><a class="btn btn-default" role="button">PicPack Planetary Satellites &raquo;</a></p>
+              <p><a class="btn btn-default btn-full" role="button">PicPack Deep Sky 1 &raquo;</a></p>
+              <p><a class="btn btn-default btn-full" role="button">PicPack Deep Sky 2 &raquo;</a></p>
+              <p><a class="btn btn-default btn-full" role="button">PicPack Planetary Satellites &raquo;</a></p>
             </div>
           </div>
         </div>
@@ -237,7 +237,7 @@
       <h1 class="text-center">Contact Stellaris</h1>
       <div class="container">
         <div>   
-            <form id="buy-form" action="" method="post" role="form" >
+            <form id="contact-form" action="" method="post" role="form" >
               <fieldset>
                 <div class="label-field">Name</div>
                 <div class="input-field"><input type="text" class="form-control" placeholder=""></div>
@@ -268,6 +268,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/vendor/skrollr.min.js"></script>
 
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
