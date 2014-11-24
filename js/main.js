@@ -1,4 +1,9 @@
-//Validating Form using jQuery for the Buy Section
+/***************** MAIN.JS: CUSTOM JAVASCRIPT CODE *************************/
+
+	/******************************************************
+	Validating the Forms using jQuery for the Buy Section
+	******************************************************/
+
     $(document).ready(function() {
 		// <!-- Real-time Validation -->
  
