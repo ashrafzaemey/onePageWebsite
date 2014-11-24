@@ -35,6 +35,17 @@ $(window).scroll(function() {
 
 //Setting the carousel speed interval - http://getbootstrap.com/javascript/#carousel
  $('.carousel').carousel({
-    interval: 5000 //The amount of time to delay between automatically cycling an item
+    interval: 2500 //The amount of time to delay between automatically cycling an item
 })
     
+//jQuery Easing that uses jQuery for scrolling between sections
+//Reference: http://gsgd.co.uk/sandbox/jquery/easing/ and http://easings.net/
+$(function() {
+    $('a.scroll-section').bind('click', function(event) {
+        var section = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(section.attr('href')).offset().top
+        }, 2500, 'easeOutQuint');
+        event.preventDefault();
+    });
+});

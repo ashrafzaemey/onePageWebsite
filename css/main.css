@@ -22,7 +22,7 @@ h1,h2,h3,h4,h5,h6 {
     letter-spacing: 2px;
 }
 h1,h2{
-	margin: 0 0 51px;
+    margin: 0 0 51px;
 }
 
 p {
@@ -40,9 +40,12 @@ p {
 }
 
 
+
 .jumbotron {
     background-color: transparent;
     min-height: 40vh;
+    padding-bottom: 17px;
+    margin-bottom: 9px;
 }
 
 .jumbotron .container {
@@ -61,7 +64,9 @@ p {
 }
 
 .jumbotron p{
-	margin: 0;
+    margin: 0;
+    width: 75%;
+    margin: auto;
 }
 
 
@@ -80,6 +85,10 @@ a:hover,a:focus {
 .light {
     font-weight: 400;
 }
+
+/*******************************
+Styling Navigation
+*******************************/
 
 .navbar-custom {
     margin-bottom: 0;
@@ -151,6 +160,10 @@ a:hover,a:focus {
     }
 }
 
+/*******************************
+Home Section styling section
+********************************/
+
 .home {
     display: initial;
     /* width: 100%; */
@@ -194,6 +207,10 @@ a:hover,a:focus {
     }
 }
 
+/********************************
+Button styling customisation 
+*********************************/
+
 .btn-circle {
     background: #000000;
     /* width: 303px; */
@@ -221,37 +238,7 @@ a:hover,a:focus {
     background: #3f3f3f;
     border: none;
 }
-.content-section, .contact-section {
-    background: #cecece;
-    color: #111111;
-    padding-top: 100px;
-    height: auto;
-    min-height: 100vh;
-}
 
-.download-section {
-    width: 100%;
-    height: auto;
-    min-height: 100%;
-    padding: 50px 0;
-    color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: #000;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-@media(min-width:767px) {
-    .content-section .contact-section{
-        padding-top: 101px;
-    }
-
-    .download-section {
-        padding: 100px 0;
-    }
-}
 .btn {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -276,52 +263,26 @@ a:hover,a:focus {
 }
 
 .btn-full {
-	width: 100%;
+    width: 100%;
 }
 
-.small-font{font-size: 15px !important;}
 
-.awards {
-	position: absolute;
-	bottom: 21px;
-	float: left;
-	left: 45px;
-}
+/******************************
+Carousel for Home Section
+*******************************/
 
-li.numberList {
-    width: 58px; height: 56px; 
-    background: #ef3971; color: white; font-size: 44px; font-family: Titillium,Arial,sans-serif; border-radius: 5px; text-align: center; line-height: 56px; padding: 0 !important; margin: 10px 0; 
-    clear: both;
-    float: left;
-}
+.carousel{height: 72vh;width: 115vh;margin: 0 auto;margin-bottom: 26px;}
 
-ul.featuredList {
-    list-style-type: none;
-    padding: 0;
-}
-
-li.descList {
-    /* float: left; */ 
-    padding: 19px 11px 15px 71px;
-}
-
-footer {
-    padding: 50px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-.carousel{height: 73vh;width: 117vh;margin: 0 auto;}
 .carousel-inner,
 .item,
 .active {
     height: 100%;
 }
+
 .carousel-control.right, .carousel-control.left {
     background-image: linear-gradient(to right,rgba(0, 0, 0, 0.15) 0,rgba(0, 0, 0, 0.51) 100%);
 }
+
 /* Background images are set within the HTML using inline CSS, not here */
 .fill {
     width: 100%;
@@ -341,22 +302,83 @@ footer p {
     min-width: 100%;
     height: 500px;
 }
-.glyphicon-chevron-right, .glyphicon-chevron-left {
-    color: red;
+
+.carousel-caption {
+    width: 50%;
+    margin: 0 auto;
 }
+
+.glyphicon-chevron-right, .glyphicon-chevron-left {
+}
+
+/**************************************
+Page Sections syling customisation
+***************************************/
+
+.content-section, .contact-section {
+    background: #cecece;
+    color: #111111;
+    padding-top: 100px;
+    height: auto;
+    min-height: 100vh;
+}
+
+.download-section {
+    width: 100%;
+    height: auto;
+    /* min-height: 100%; */
+    padding: 50px 0;
+    color: #fff;
+    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+@media(min-width:767px) {
+    .content-section .contact-section{
+        padding-top: 101px;
+    }
+
+    .download-section {
+        padding: 100px 0;
+    }
+}
+
+.small-font{font-size: 15px !important;}
+
+li.numberList {
+    width: 58px; height: 56px; 
+    background: #ef3971; color: white; font-size: 44px; font-family: Titillium,Arial,sans-serif; border-radius: 5px; text-align: center; line-height: 56px; padding: 0 !important; margin: 10px 0; 
+    clear: both;
+    float: left;
+}
+
+ul.featuredList {
+    list-style-type: none;
+    padding: 0;
+}
+
+li.descList {
+    /* float: left; */ 
+    padding: 19px 11px 15px 71px;
+}
+
 
 /*****************************
 Buy Section:
 *****************************/ 
 form#buy-form {
-    width: 60%;
+    width: 77%;
     margin: 0 auto;
 }
 
 fieldset {
-	border: 0;
-	margin: 9px 0;
-	padding: 7px 0;
+    border: 0;
+    margin: 9px 0;
+    padding: 7px 0;
 }
 
 .label-field, .input-field {
@@ -365,7 +387,6 @@ fieldset {
     display: block;
     margin: 5px;
     font-size: 17px;
-    font-weight: 700;
 }
 
 .label-field {
@@ -398,3 +419,21 @@ fieldset {
     min-height: 589px;
 }
 
+
+.awards {
+    position: absolute;
+    bottom: 21px;
+    float: left;
+    left: 45px;
+}
+
+/****************************************
+Footer page section
+****************************************/
+footer {
+    padding: 50px 0;
+}
+
+footer p {
+    margin: 0;
+}
