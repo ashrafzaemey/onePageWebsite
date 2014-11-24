@@ -6,7 +6,7 @@ body {
     height: 100%;
     font-family: sans-serif,Helvetica,Arial;
     color: #fff;
-    background-color: #000;
+    background-color: #333;
 }
 
 html {
@@ -44,19 +44,23 @@ p {
 .jumbotron {
     background-color: transparent;
     min-height: 40vh;
-    padding-bottom: 17px;
+    padding-bottom: 23px;
+    padding-left: 0;
+    padding-right: 0;
     margin-bottom: 9px;
 }
 
 .jumbotron .container {
     /* float: right; */
-    /* width: 100%; */
+    width: 100%;
     /* margin-right: 15px; */
     margin-top: 3%;
     text-align: center;
     background: #ef3971;
     padding: 17px 61px;
-    border-radius: 27px;
+    /* border-radius: 27px; */
+    border-bottom: 2px solid #fff;
+    border-top: 2px solid #fff;
 }
 
 .jumbotron h1 {
@@ -165,14 +169,15 @@ Home Section styling section
 ********************************/
 
 .home {
-    display: initial;
+    /* display: initial; */
     /* width: 100%; */
     height: auto;
+    min-height: 100vh;
     padding: 39px 0;
     text-align: center;
     color: #fff;
     /* background: url(../img/IC1396_animation2.gif) no-repeat center scroll; */
-    background-color: #000;
+    /* background-color: #000; */
     -webkit-background-size: cover;
     background-size: cover;
 }
@@ -192,10 +197,9 @@ Home Section styling section
 
 @media(min-width:767px) {
     .home {
-        height: 100%;
         padding: 0;
     
-        margin: 11px;
+        /* margin: 11px; */
 }
 
     .home .brand-heading {
